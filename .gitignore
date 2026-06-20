@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+
+# Environment Variables
+.env
+
+# SQLite
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+
+# Node
+node_modules/
+
+# React
+frontend/node_modules/
+
+# Python Cache
+.pytest_cache/
