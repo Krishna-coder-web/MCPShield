@@ -1,32 +1,13 @@
 [
     {
-        "event_id": "9c9777ae-7146-4d5a-ae55-7e303f92a67b",
+        "event_id": "f7ac3301-932f-40f9-ba4a-f970c0e870ee",
         "source": "MCPShield",
-        "timestamp": "2026-06-24 00:59:38",
-        "prompt": "restart test",
+        "timestamp": "2026-06-24 01:41:29",
+        "prompt": "hello",
         "threat": false,
         "threat_type": "NONE",
         "severity": "NONE",
-        "semantic_score": 0.448,
-        "risk_score": 0,
-        "raw_risk_score": 0,
-        "action": "ALLOW",
-        "matched_patterns": [],
-        "risk_factors": {
-            "category_weight": 0,
-            "semantic_component": 0,
-            "detector_component": 0
-        }
-    },
-    {
-        "event_id": "bb888668-3657-435b-9f7b-48c25a8fecc9",
-        "source": "MCPShield",
-        "timestamp": "2026-06-24 01:01:03",
-        "prompt": "restart test no 2",
-        "threat": false,
-        "threat_type": "NONE",
-        "severity": "NONE",
-        "semantic_score": 0.475,
+        "semantic_score": 0.31,
         "risk_score": 0,
         "raw_risk_score": 0,
         "action": "ALLOW",

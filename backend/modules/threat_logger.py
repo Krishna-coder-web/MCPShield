@@ -1,7 +1,7 @@
 import json
 import os
 import uuid
-from datetime import date, datetime
+from datetime import timedelta, datetime
 
 class ThreatLogger:
 
@@ -10,9 +10,54 @@ class ThreatLogger:
         date = datetime.now().strftime("%Y-%m-%d")
         
         return f"logs/threat_logs_{date}.json"
+    
+    def cleanup_old_logs(self):
+
+        os.makedirs("logs", exist_ok=True)
+
+        cutoff_date = datetime.now() - timedelta(days=30)
+
+        for filename in os.listdir("logs"):
+
+            if not filename.startswith("threat_logs_"):
+                continue
+
+            if not filename.endswith(".json"):
+                continue
+
+            try:
+
+                date_part = (
+                    filename
+                    .replace("threat_logs_", "")
+                    .replace(".json", "")
+                )
+
+                file_date = datetime.strptime(
+                    date_part,
+                    "%Y-%m-%d"
+                )
+
+                if file_date < cutoff_date:
+
+                    os.remove(
+                        os.path.join("logs", filename)
+                    )
+
+                    print(
+                        f"Deleted old log: {filename}"
+                    )
+
+            except Exception as e:
+
+                print(
+                    f"Cleanup error: {filename} -> {e}"
+                )
 
     def log_event(self, prompt, result):
-
+        
+        self.cleanup_old_logs()
+        
         log_entry = {
             "event_id": str(uuid.uuid4()),
             "source": "MCPShield",
