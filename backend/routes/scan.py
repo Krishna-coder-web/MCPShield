@@ -14,7 +14,7 @@ class ScanRequest(BaseModel):
     prompt: str
 
 
-@router.post("/scan")
+@router.post("/scan",)
 def scan_prompt(data: ScanRequest):
 
     result = detector.analyze(data.prompt)

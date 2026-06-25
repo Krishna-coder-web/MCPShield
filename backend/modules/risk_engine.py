@@ -30,22 +30,36 @@ class RiskEngine:
 
         raw_risk_score = risk_score
         risk_score = min(risk_score, 100)
-
+            
         if risk_score >= 80:
             action = "BLOCK"
-
         elif risk_score >= 50:
             action = "REVIEW"
-
         elif risk_score >= 20:
             action = "ALLOW_WITH_WARNING"
-
         else:
             action = "ALLOW"
+            
+        if risk_score >= 80:
+            severity = "CRITICAL"
+
+        elif risk_score >= 60:
+            severity = "HIGH"
+
+        elif risk_score >= 30:
+            severity = "MEDIUM"
+
+        elif risk_score >= 0:
+            severity = "LOW"
+
+        else:
+            severity = "NONE"
+        
 
         return {
             "risk_score": risk_score,
             "raw_risk_score": raw_risk_score,
+            "severity": severity,
             "action": action,
             "risk_factors": {
                 "category_weight": category_weights.get(category, 0),

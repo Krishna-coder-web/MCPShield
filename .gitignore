@@ -40,3 +40,6 @@ frontend/node_modules/
 
 # Python Cache
 .pytest_cache/
+
+#logs 
+logs/

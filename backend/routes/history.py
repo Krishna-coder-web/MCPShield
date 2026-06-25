@@ -7,12 +7,12 @@ router = APIRouter()
 engine = HistoryEngine()
 
 
-@router.get("/history")
+@router.get("/history",include_in_schema=False)
 def get_history():
 
     return engine.get_history()
 
-@router.get("/recent")
+@router.get("/recent",include_in_schema=False)
 def get_recent():
 
     return engine.get_recent()

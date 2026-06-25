@@ -6,7 +6,7 @@ router = APIRouter()
 
 stats_engine = StatsEngine()
 
-@router.get("/stats")
+@router.get("/stats",include_in_schema=False)
 def get_stats():
 
     return stats_engine.get_stats()

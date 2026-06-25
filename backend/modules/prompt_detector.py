@@ -475,7 +475,7 @@ class PromptDetector:
             "access protected resources",
             "assume administrator role",
             "become privileged user",
-            "acquire root credentials"
+            "acquire root credentials",
             "how to become administrator",
             "how to become admin",
             "steps to become admin",
@@ -490,7 +490,7 @@ class PromptDetector:
             "gain elevated privileges",
             "obtain privileged access",
             "access administrator account",
-            "unlock administrative permissions"
+            "unlock administrative permissions",
             "assume elevated role",
             "acquire supervisory access",
             "unlock privileged functions",
@@ -907,7 +907,10 @@ class PromptDetector:
             score += 15
         score = min(score, 100)
 
-        threat = score > 0
+        if semantic_score > 0.65:
+            score = max(score, 15)
+                        
+        threat = (score >= 0 or semantic_score >= 0.65)
         
         if score >= 70:
             severity = "HIGH"
