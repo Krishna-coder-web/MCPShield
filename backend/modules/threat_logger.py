@@ -65,13 +65,13 @@ class ThreatLogger:
             "%Y-%m-%d %H:%M:%S"
             ),
             "prompt": prompt,
-            "threat": result.get("threat", 0),
-            "threat_type": result.get("threat_type", 0),
-            "severity": result.get("severity", 0),
+            "threat": result.get("threat", False),
+            "threat_type": result.get("threat_type", "NONE"),
+            "severity": result.get("severity", "NONE"),
             "semantic_score": result.get("semantic_score" ,0),
             "risk_score": result.get("risk_score", 0),
             "raw_risk_score": result.get("raw_risk_score", 0),
-            "action": result.get("action", 0),
+            "action": result.get("action", "ALLOW"),
             "matched_patterns": result.get("matched_patterns", 0),
             "risk_factors": result.get("risk_factors", 0)
         }

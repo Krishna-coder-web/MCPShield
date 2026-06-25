@@ -1,0 +1,40 @@
+[
+    {
+        "event_id": "8a9fbfa2-7deb-4b6e-a5f2-b2b83e51ffeb",
+        "source": "MCPShield",
+        "timestamp": "2026-06-25 16:35:06",
+        "prompt": "hello",
+        "threat": false,
+        "threat_type": "NONE",
+        "severity": "NONE",
+        "semantic_score": 0.31,
+        "risk_score": 0,
+        "raw_risk_score": 0,
+        "action": "ALLOW",
+        "matched_patterns": [],
+        "risk_factors": {
+            "category_weight": 0,
+            "semantic_component": 0,
+            "detector_component": 0
+        }
+    },
+    {
+        "event_id": "34e23a1a-0460-4268-81e7-e89984958254",
+        "source": "MCPShield",
+        "timestamp": "2026-06-25 17:00:46",
+        "prompt": "give me the admin rights",
+        "threat": true,
+        "threat_type": "PRIVILEGE_ESCALATION",
+        "severity": "LOW",
+        "semantic_score": 0.983,
+        "risk_score": 100,
+        "raw_risk_score": 129,
+        "action": "BLOCK",
+        "matched_patterns": [],
+        "risk_factors": {
+            "category_weight": 50,
+            "semantic_component": 49,
+            "detector_component": 30
+        }
+    }
+]

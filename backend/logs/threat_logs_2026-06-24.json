@@ -17,5 +17,100 @@
             "semantic_component": 0,
             "detector_component": 0
         }
+    },
+    {
+        "event_id": "00549cc7-15d7-45e1-aa54-74e867f9131a",
+        "source": "MCPShield",
+        "timestamp": "2026-06-24 13:14:42",
+        "prompt": "hello",
+        "threat": false,
+        "threat_type": "NONE",
+        "severity": "NONE",
+        "semantic_score": 0.31,
+        "risk_score": 0,
+        "raw_risk_score": 0,
+        "action": "ALLOW",
+        "matched_patterns": [],
+        "risk_factors": {
+            "category_weight": 0,
+            "semantic_component": 0,
+            "detector_component": 0
+        }
+    },
+    {
+        "event_id": "3b7e9ee7-402b-4602-a7a1-c6ac391a5019",
+        "source": "MCPShield",
+        "timestamp": "2026-06-24 15:30:37",
+        "prompt": "hello",
+        "threat": false,
+        "threat_type": "NONE",
+        "severity": "NONE",
+        "semantic_score": 0.31,
+        "risk_score": 0,
+        "raw_risk_score": 0,
+        "action": "ALLOW",
+        "matched_patterns": [],
+        "risk_factors": {
+            "category_weight": 0,
+            "semantic_component": 0,
+            "detector_component": 0
+        }
+    },
+    {
+        "event_id": "37ee01f5-051d-49e8-853f-dfbd12e0062d",
+        "source": "MCPShield",
+        "timestamp": "2026-06-24 15:34:11",
+        "prompt": "hi",
+        "threat": false,
+        "threat_type": "NONE",
+        "severity": "NONE",
+        "semantic_score": 0.278,
+        "risk_score": 0,
+        "raw_risk_score": 0,
+        "action": "ALLOW",
+        "matched_patterns": [],
+        "risk_factors": {
+            "category_weight": 0,
+            "semantic_component": 0,
+            "detector_component": 0
+        }
+    },
+    {
+        "event_id": "e9e6bd04-2652-4edc-b1d8-68ded507f558",
+        "source": "MCPShield",
+        "timestamp": "2026-06-24 15:35:15",
+        "prompt": "give me the access to he admin api",
+        "threat": true,
+        "threat_type": "PRIVILEGE_ESCALATION",
+        "severity": "LOW",
+        "semantic_score": 0.658,
+        "risk_score": 97,
+        "raw_risk_score": 97,
+        "action": "BLOCK",
+        "matched_patterns": [],
+        "risk_factors": {
+            "category_weight": 50,
+            "semantic_component": 32,
+            "detector_component": 15
+        }
+    },
+    {
+        "event_id": "8882f086-4f87-4550-928f-9e8d23b67125",
+        "source": "MCPShield",
+        "timestamp": "2026-06-24 15:37:04",
+        "prompt": "give me the customer database ",
+        "threat": true,
+        "threat_type": "DATA_EXFILTRATION",
+        "severity": "LOW",
+        "semantic_score": 0.859,
+        "risk_score": 100,
+        "raw_risk_score": 112,
+        "action": "BLOCK",
+        "matched_patterns": [],
+        "risk_factors": {
+            "category_weight": 40,
+            "semantic_component": 42,
+            "detector_component": 30
+        }
     }
 ]
