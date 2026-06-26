@@ -907,10 +907,14 @@ class PromptDetector:
             score += 15
         score = min(score, 100)
 
-        if semantic_score > 0.65:
-            score = max(score, 15)
-                        
-        threat = (score >= 0 or semantic_score >= 0.65)
+       
+        threat= False 
+        if score >0 :
+            threat = True
+            
+        if semantic_score >= 0.65:
+            threat = True
+        
         
         if score >= 70:
             severity = "HIGH"
